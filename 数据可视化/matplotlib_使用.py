@@ -30,23 +30,23 @@ plt.bar(x=l1,height=l2,color='yellow')
     tick_label：用于指定柱状图的刻度标签，通常是一个字符串数组或序列。
 '''
 plt.show()
-# # 饼图
-# plt.pie(labels=l1,x=l2)
+# 饼图
+plt.pie(labels=l1,x=l2)
 
-# # 散点图
-# # 属性——x,y,s(数据点的大小),c(散点的颜色),marker='o'(散点样式), alpha=0.5（透明度）
-# x = np.random.rand(300)
-# y = np.random.rand(300)
-# plt.scatter(x,y)
+# 散点图
+# 属性——x,y,s(数据点的大小),c(散点的颜色),marker='o'(散点样式), alpha=0.5（透明度）
+x = np.random.rand(300)
+y = np.random.rand(300)
+plt.scatter(x,y)
 
-# # 箱形图
-# a2 = np.random.randint(20,size=(10,4))
-# plt.boxplot(a2)
-#
-# # 有关子图
-# fig,axs=plt.subplots(2,2)#创建2，2的子图
-# axs[0,0].plot(s) # 选定子图绘制
-#
-# # 要在所有子图中绘制相同的图形，请使用循环。以下代码将在所有子图中绘制一条线：
-# for ax in axs.flat:
-#     ax.plot(a)
+# 箱形图
+a2 = np.random.randint(20,size=(10,4))
+plt.boxplot(a2)
+
+# 有关子图
+fig,axs=plt.subplots(2,2)#创建2，2的子图
+axs[0,0].plot(s) # 选定子图绘制
+
+# 要在所有子图中绘制相同的图形，请使用循环。以下代码将在所有子图中绘制一条线：
+for ax in axs.flat:
+    ax.plot(a)
