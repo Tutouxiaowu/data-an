@@ -8,7 +8,7 @@ na_df = pd.DataFrame({'A':[1, 2, np.NaN, 4],
 print(na_df)
 # 利用isnull，isna（notnull）可检测是否存在缺失值
 print(na_df.isna().sum())# 统计
-print(na_df.isnull().any())# 存在确实值,返回true
+print(na_df.isnull().any())# 存在缺失值,返回true
 # 缺失值处理
 # 删除缺失行
 new_df = na_df.dropna()# thresh=3 存在3非NaN值

@@ -30,6 +30,7 @@ plt.bar(x=l1,height=l2,color='yellow')
     tick_label：用于指定柱状图的刻度标签，通常是一个字符串数组或序列。
 '''
 plt.show()
+
 # 饼图
 plt.pie(labels=l1,x=l2)
 
@@ -50,3 +51,4 @@ axs[0,0].plot(s) # 选定子图绘制
 # 要在所有子图中绘制相同的图形，请使用循环。以下代码将在所有子图中绘制一条线：
 for ax in axs.flat:
     ax.plot(a)
+# 有关图的辅助元素请看另一个 matplotlib辅助元素
