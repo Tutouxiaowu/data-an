@@ -62,11 +62,12 @@ plt.rcParams['axes.unicode_minus']=False # 正确显示负号，防止变成方�
 # f3_ax4  = fig3.add_subplot(gs[2,0:0])
 # f3_ax5  = fig3.add_subplot(gs[2,1:3])
 # plt.show()
-fig3 = plt.figure(figsize=(12,8))  # 创建一个画布
-gs = fig3.add_gridspec(3, 4)  # 利用GridSpec类创建对象，3行4列
-f3_ax1 = fig3.add_subplot(gs[0, :])  # 第一个子图为第一行的全部
-f3_ax2 = fig3.add_subplot(gs[1, 0:2])  # 修改索引范围
-f3_ax3 = fig3.add_subplot(gs[1, 2:4])  # 修改索引范围
-f3_ax4 = fig3.add_subplot(gs[2, 0:1])  # 修改索引范围
-f3_ax5 = fig3.add_subplot(gs[2, 1:4])  # 修改索引范围
-plt.show()
+# fig3 = plt.figure(figsize=(12,8))  # 创建一个画布
+# gs = fig3.add_gridspec(3, 4)  # 利用GridSpec类创建对象，3行4列
+# f3_ax1 = fig3.add_subplot(gs[0, :])  # 第一个子图为第一行的全部
+# f3_ax2 = fig3.add_subplot(gs[1, 0:2])  # 修改索引范围
+# f3_ax3 = fig3.add_subplot(gs[1, 2:4])  # 修改索引范围
+# f3_ax4 = fig3.add_subplot(gs[2, 0:1])  # 修改索引范围
+# f3_ax5 = fig3.add_subplot(gs[2, 1:4])  # 修改索引范围
+# plt.show()
+# 以原坐标轴为例 0.2，0.2 位置绘制一个0.7，0.7大小的坐标轴

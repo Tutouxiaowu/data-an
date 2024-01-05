@@ -57,7 +57,35 @@ plt.scatter(x,y)
 常用辅助元素：
 1.xlabel,ylabel
 2.xlim,ylim 刻度范围
-3.legend() 图例
+3.title
+4.legend() 图例
+5.grid网格
+6.xticks刻度
+7.annotate注释指向性文本
+8.text 无指向性文本(x,y,s,bbox)
+9.table
+10.plt.figure(figsize=(10,8)) 设置画布大小
+
+当我想在画布上绘制多个子图如何操作呢
+① 普通的子图绘制
+fig = plt.figure()
+fig.suptitle('Figure') # 创建一张画布 子图标题为Figure
+plt.subplot(341) # 将画布分为3-4 的第一个位置（区域意识！！）
+plt.subplot(3,4,(2,4)) # 在3-4中 左上角是第2个区域，右下角是第四个区域
+# 这样我们就可以完成 自己随意的定义区域而不受限制
+
+②此外创建子图对象
+fig2,axs = plt.subplots(2,2,figsize=(5,5)) # 绘制的2行2列
+axs[0,0].hist() # 均等的第一个子图的绘制
+# 自定义布局方式之add_gridspec()   GridSpec类
+fig3 = plt.figure()  # 创建一个画布
+gs = fig3.add_gridspec(3,3) # 利用GriSpec类创建对象，3行3列
+f3_ax1 = fig3.add_subplot(gs[0,:]) # 第一个子图为第一行的全部
+f3_ax2  = fig3.add_subplot(gs[1,:-1]) #  第二个为第二行的最后一列
+
+这个时候很多图表基本上我们都能绘制了
+为了更加个性化的定制可以进行以下：
+1.坐标轴的定制
 '''
 import numpy as np
 list1 = [1,2,3,4,5]
